@@ -10,7 +10,7 @@ import clsx from 'clsx';
 
   export default function NavLinks() {
     const links = [
-        { name: 'Home', href: '/dashboard', icon: HomeIcon },
+        { name: 'Home', href: '/dashboard/overview', icon: HomeIcon },
         {
           name: 'Invoices',
           href: '/dashboard/invoices',
@@ -20,7 +20,7 @@ import clsx from 'clsx';
       ]
       const pathname = usePathname();
     return (
-      <>
+      <div className='flex gap-30'>
         {links.map((link: any) => {
           const LinkIcon = link.icon;
           return (
@@ -39,6 +39,6 @@ import clsx from 'clsx';
             </Link>
           );
         })}
-      </>
+      </div>
     );
   }
